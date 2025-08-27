@@ -33,8 +33,6 @@ def translate(text, model, tokenizer, device):
         # TERJEMAHKAN TEXT
         generated = model.generate(**encoder)   # --> RETURN SEQUENCE ID VOCABULARY
 
-        st.write(generated)
-
         # DECODE SEQUENCE VECTOR ID INTO NORMAL STRING (BASED ON VOCABULARY)
         decode = tokenizer.batch_decode(generated, skip_special_tokens = True)  # --> RETURN TRANSLATED TEXT
         
